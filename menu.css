@@ -1,3 +1,6 @@
+/*importacao de fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Underdog&display=swap');
+
 /* configurações gerais da pagina */
 *{
     margin: 0 auto;
@@ -13,9 +16,13 @@ body {
     background-color: gray;
     text-align: left;
     border-width: 10px;
+    
     margin: 20px;
     border: greenyellow solid 1px;
     text-align: center;
+    font-family: "Underdog", system-ui;
+        font-weight: 400;
+    font-style: normal;
 }
 /*"." é para chamar o class*/
 .menu{
@@ -30,10 +37,29 @@ body {
     border-right: 2px solid brown;
     list-style: none;
 }
-.menu li a{
+.menu li a:hover  {
+    background: rgb(5, 75, 122);
     color: black;
     text-decoration: none;
-    padding: 30px  ;
+    padding: 3px  ;
     display: block;
-    
+    box-shadow: 3px 4px 0px greenyellow;
+    text-shadow: 0px 0px 5px rgb(192, 124, 22);
 }
+/*estrutura drop*/
+.menu li ul{
+    position: absolute;
+    top: 25px ;
+    left: 0px;
+    background-color: black;
+    display: none;
+}
+.menu li:hover  ul {
+    display: block;
+}
+.menu li ul li {
+    border: 1px solid red;
+    display: block ;
+    width: 100px;
+}
+
